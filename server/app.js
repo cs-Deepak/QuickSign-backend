@@ -193,18 +193,18 @@ connectDB()
 app.use("/auth/manual", manualAuthRoutes);
 app.use(express.json());
 
-// ✅ Session config
 app.use(session({
   secret: process.env.SESSION_SECRET || "1245644298hniyrcoiuqn",
   resave: false,
   saveUninitialized: false,
   cookie: {
-    secure: process.env.NODE_ENV === "production",
+    secure: true, // 🔁 Force secure always for HTTPS like Render
     httpOnly: true,
     sameSite: "none",
     maxAge: 24 * 60 * 60 * 1000
   }
 }));
+
 
 app.use(passport.initialize());
 app.use(passport.session());
