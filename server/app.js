@@ -296,13 +296,23 @@ app.get("/logout", (req, res, next) => {
   });
 });
 
+// app.get("/login/success", async (req, res) => {
+//   if (req.user) {
+//     res.status(200).json({ message: "user Login", user: req.user });
+//   } else {
+//     res.status(400).json({ message: "Not Authorized" });
+//   }
+// });
+
 app.get("/login/success", async (req, res) => {
+  console.log("✅ req.user is:", req.user); // Add this
   if (req.user) {
     res.status(200).json({ message: "user Login", user: req.user });
   } else {
     res.status(400).json({ message: "Not Authorized" });
   }
 });
+
 
 // ✅ Root test route
 app.get("/", (req, res) => {
