@@ -7,7 +7,7 @@ const DB = process.env.DATABASE;
 
 const connectDB = async () => {
     try {
-        await mongoose.connect('mongodb+srv://ddeepakkumaryadav9162:ofZTz2iIjzciVjkS@cluster0.bhbmu.mongodb.net/todoapp?retryWrites=true&w=majority&appName=Cluster0',{
+        await mongoose.connect('mongodb+srv://ddeepakkumaryadav9162:ofZTz2iIjzciVjkS@cluster0.bhbmu.mongodb.net/QuickSign?retryWrites=true&w=majority&appName=Cluster0',{
             ssl: true
         });  // no extra options needed
         console.log("MongoDB is connected");
