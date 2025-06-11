@@ -5,7 +5,7 @@ const User = require("./models/User");
 
 const app = express();
 
-app.use(cors({ origin: "https://todo-ugwc.vercel.app", credentials: true }));
+app.use(cors({ origin: "https://quicksign3.netlify.app", credentials: true }));
 app.use(express.json());
 
 // Connect MongoDB
