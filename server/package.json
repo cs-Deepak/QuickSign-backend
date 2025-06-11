@@ -2,9 +2,9 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",                     // 👈 change if your main file is app.js
+  "main": "app.js",                     
   "scripts": {
-    "start": "node app.js"             // ✅ added start script
+    "start": "node app.js"             
   },
   "keywords": [],
   "author": "",
