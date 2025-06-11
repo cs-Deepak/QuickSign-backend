@@ -2,12 +2,9 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",                     // 👈 change if your main file is app.js
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "start": "node app.js"             // ✅ added start script
   },
   "keywords": [],
   "author": "",
@@ -24,8 +21,5 @@
     "passport": "^0.7.0",
     "passport-google-oauth2": "^0.2.0",
     "react-pdf": "^9.2.1"
-  },
-  "devDependencies": {
-    "vite": "^6.3.5"
   }
 }
