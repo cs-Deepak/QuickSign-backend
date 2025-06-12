@@ -199,7 +199,7 @@ app.use(session({
   saveUninitialized: false,
   cookie: {
     secure: true, // 🔁 Force secure always for HTTPS like Render
-    // httpOnly: true,
+    httpOnly: true,
     sameSite: "none",
     maxAge: 24 * 60 * 60 * 1000
   }
