@@ -178,11 +178,20 @@ const connectDB = require('./db/conn');
 const manualAuthRoutes = require("./routes/manualAuthRoutes");
 
 // ✅ CORS for QuickSign frontend only
-app.use(cors({
-  origin: "https://quicksign3.netlify.app",
-  methods: "GET,POST,PUT,DELETE",
-  credentials: true
-}));
+// app.use(cors({
+//   origin: "https://quicksign3.netlify.app",
+//   methods: "GET,POST,PUT,DELETE",
+//   credentials: true
+// }));
+
+
+app.use(
+  cors({
+    origin: "https://quicksign3.netlify.app", // your frontend
+    credentials: true, // 👈 required for sending cookies
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  })
+);
 
 
 // ✅ Connect to MongoDB
